@@ -8,7 +8,7 @@ public class TipCalculator {
 		Scanner Amount = new Scanner(System.in);
 		chek = Amount.nextFloat();
 		System.out.println("Your total with 10 percent is: " + TipTen());
-		System.out.println("Your total with 15 percent is: " + TipFifthteen());
+		System.out.println("Your total with 15 percent is: " + TipFifteen());
 		System.out.println("Your total with 20 percent is: " + TipTwenty());
 		System.out.println("Your total with 25 percent is: " + TipTwentyFive());
 		
@@ -16,7 +16,7 @@ public class TipCalculator {
 		double tip10;
 		tip10 = TipTen();
 		double tip15;
-		tip15 = TipFifthteen();
+		tip15 = TipFifteen();
 		double tip20;
 		tip20 = TipTwenty();
 		double tip25;
@@ -30,7 +30,7 @@ public class TipCalculator {
 		return TipTen;
 	}
 	
-	public static double TipFifthteen()
+	public static double TipFifteen()
 	{
 		double TipFifthteen = chek * 15 / 100;
 		return TipFifthteen;
