@@ -7,10 +7,11 @@ public class TipCalculator {
 		System.out.println("What is your bill amount? ");
 		Scanner Amount = new Scanner(System.in);
 		chek = Amount.nextFloat();
-		System.out.println("Your total with 10 percent is: " + TipTen());
-		System.out.println("Your total with 15 percent is: " + TipFifteen());
-		System.out.println("Your total with 20 percent is: " + TipTwenty());
-		System.out.println("Your total with 25 percent is: " + TipTwentyFive());
+
+		System.out.println("Your tip with 10 percent is: " + TipTen());
+		System.out.println("Your tip with 15 percent is: " + TipFifteen());
+		System.out.println("Your tip with 20 percent is: " + TipTwenty());
+		System.out.println("Your tip with 25 percent is: " + TipTwentyFive());
 		
 		
 		double tip10;
