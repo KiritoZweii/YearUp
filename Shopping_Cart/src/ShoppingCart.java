@@ -7,7 +7,7 @@ public class ShoppingCart {
 	static ArrayList<Item> shoppingCart = new ArrayList<Item>();
 	static Scanner sc = new Scanner(System.in);
 	static double total = 0;
-	NumberFormat formatter = new DecimalFormat("0.00"); 
+	static NumberFormat formatter = new DecimalFormat("0.00"); 
 
 
 
@@ -15,6 +15,7 @@ public class ShoppingCart {
 		introduction();
 		ShoppingCart cart = new ShoppingCart();
 		cart.shoppingCartWork();
+		howToEnd();
 
 	}
 
@@ -46,7 +47,7 @@ public class ShoppingCart {
 
 
 
-	public void ScanItems() {
+	public static void ScanItems() {
 		System.out.println("Enter item name: ");
 		String name = sc.nextLine();
 		while (!name.equalsIgnoreCase("n")) {
@@ -63,7 +64,7 @@ public class ShoppingCart {
 		}
 	}
 
-	public void ListItems() {
+	public static void ListItems() {
 
 		System.out.println();
 		System.out.println("*********** Here are your Items ***********");
@@ -78,7 +79,7 @@ public class ShoppingCart {
 
 	}
 
-	public void RemoveItems() 
+	public static void RemoveItems() 
 	{
 		System.out.println("\nDo you want to remove a item? y/n");
 		ListItems();
@@ -103,7 +104,7 @@ public class ShoppingCart {
 			}
 		}
 	}
-	public String Total()
+	public static String Total()
 	{
 		double price = 0;
 		int i = 0;
@@ -149,8 +150,6 @@ public class ShoppingCart {
 				{
 					System.out.println();
 					System.out.println("Do you want to input items? Type y/n");
-					String reply2 = sc.nextLine();
-
 					if (reply.equalsIgnoreCase("y")) {
 						ScanItems();
 						ListItems();
@@ -166,6 +165,9 @@ public class ShoppingCart {
 
 					}
 				}
+		
+					
+				
 			}
 
 
@@ -174,5 +176,28 @@ public class ShoppingCart {
 		return null;
 
 	}
+	public static String howToEnd(){
+		if(total > 100)
+			System.out.println();
+		System.out.println("Do you want to input items? Type y/n");
+		String reply = sc.nextLine();
+
+		if (reply.equalsIgnoreCase("y")) {
+			ScanItems();
+			ListItems();
+			RemoveItems();
+			Total();
+		}
+		else if(reply.equalsIgnoreCase("n"))
+		{
+			System.out.println();
+			System.out.println("*********** Thanks for using the Shopping Cart ***********");
+
+		return null;
+		}
+		return reply;
+		
+	}
 }
+
 
