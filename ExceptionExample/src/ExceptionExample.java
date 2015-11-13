@@ -1,18 +1,40 @@
 
+
 public class ExceptionExample {
 
 	public static void main(String[] args) {
+		
+		int x = 3;
+		int y = 0;
+		int total = 0;
+		System.out.println(total);
+		
+		try{
+			
+		total = x/y;
+		
 		try
 		{
 		//int[] numbers = {1,3,5,7};
 		int[] numbers = null;
 		AddArray(numbers);
 		}
-		catch (Exception ex)
+		catch (NullPointerException ex)
 		{
 			System.out.println("I tried to access a location in an array that did not exist.");
 			ex.printStackTrace();
 		}
+		
+		catch(ArithmeticException ae){
+			System.out.println("dude really?");
+			ae.printStackTrace();
+		}
+			
+		}
+		finally{
+			
+		}
+	
 	}
 	
 	private static void AddArray(int[] numbers)
